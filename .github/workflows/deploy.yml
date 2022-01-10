@@ -16,7 +16,7 @@ jobs:
       - name: Clone Deploy Repository
         uses: actions/checkout@v2
         with:
-          repository: openra/openra.github.io
+          repository:  CastleJing/castlejing.github.io
           token: ${{ secrets.DEPLOY_TOKEN }}
           path: _site
 
@@ -31,7 +31,6 @@ jobs:
       - name: Push Website
         run: |
           cd _site
-          echo www.openra.net > CNAME
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add --all
