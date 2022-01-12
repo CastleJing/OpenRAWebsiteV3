@@ -2,13 +2,20 @@
 js:
 - /scripts/index.js
 carousel_items:
-- name: Red Alert
+- name: 汉化组
+  type: image
+  image_name: openra-group.jpg
+  abbr: group
+- name: 红色警戒
+  type: video
   video_base_name: red-alert-sizzle
   abbr: ra
-- name: Command & Conquer
+- name: 命令与征服
+  type: video
   video_base_name: command-and-conquer-sizzle
   abbr: cnc
 - name: Dune 2000
+  type: video
   video_base_name: dune-2000-sizzle
   abbr: d2k
 ---
@@ -30,7 +37,7 @@ carousel_items:
       </h1>
       <div class="install">
         <a class="button button--large button--primary" href="{{ '/download/' | relative_url }}">
-          Install Now
+          下载
           <svg class="button__icon icon">
             <use xlink:href="{{ '/images/icons/icons.svg#icon-download' | relative_url }}"></use>
           </svg>
@@ -43,6 +50,9 @@ carousel_items:
           {% for carousel_item in page.carousel_items %}
             <div id="hero-{{carousel_item.abbr}}" class="carousel__item">
               <div class="carousel__item__content aspect-16-9">
+                {% if carousel_item.type == 'image' %}
+                <img class="hero-carousel__image" src="{{ '/videos/' | relative_url }}{{carousel_item.image_name}}"/>
+                {% elsif carousel_item.type == 'video' %}
                 <video
                   class="hero-carousel__image"
                   autoplay="true"
@@ -52,6 +62,7 @@ carousel_items:
                   <source src="{{ '/videos/' | relative_url }}{{carousel_item.video_base_name}}.webm" type="video/webm" />
                   <source src="{{ '/videos/' | relative_url }}{{carousel_item.video_base_name}}.mp4" type="video/mp4" />
                 </video>
+                {% endif %}
               </div>
             </div>
           {% endfor %}
