@@ -1,12 +1,12 @@
 ---
-title: "News Archive"
+title: "公告栏"
 layout: "default"
 ---
 
 <section class="developer-updates site-section">
   <div class="site-section__content">
-    <h1 class="developer-updates__heading site-section__heading">News Archive</h1>
-    <p class="text--large">OpenRA has a long and storied history, and it's all here. Learn everything from the origins of the project to the latest developments below.</p>
+    <h1 class="developer-updates__heading site-section__heading">公告栏</h1>
+    <p class="text--large">这里记录了OpenRA项目组从开始到现在最新的进展。</p>
   </div>
 </section>
 
@@ -16,7 +16,7 @@ layout: "default"
   <section class="site-section">
     <div class="site-section__content">
       <div class="dark-panel">
-        <div class="dark-panel__header"><strong>{{ year.name }}</strong></div>
+        <div class="dark-panel__header"><strong>{{ year.name }}年</strong></div>
         <ul class="developer-updates__list list--no-style">
           {% for post in year.items %}
             <li class="developer-updates__listing">
@@ -25,15 +25,15 @@ layout: "default"
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h4>
                 <div class="developer-updates__listing__subheading">
-                  Posted by <strong class="developer-update__author">{{ post.author }}</strong> at <time>{{ post.created_at | date_to_long_string }}</time>
+                  <strong class="developer-update__author">{{ post.author }}</strong> <time>{{ post.created_at | date: "%Y-%m-%d %H:%M" }}</time>
                 </div>
               </div>
-              <a
+              <!-- <a
                 class="developer-updates__listing__comments"
                 href="{{ post.url | relative_url }}#disqus_thread"
                 data-disqus-identifier="{{post.disqus_id}}">
-                Comments
-              </a>
+                评论
+              </a> -->
             </li>
           {% endfor %}
         </ul>
