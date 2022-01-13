@@ -4,13 +4,13 @@ js:
 carousel_items:
 - name: 汉化组
   type: image
-  image_name: openra-group.jpg
+  image_name: openra-group.png
   abbr: group
 - name: 红色警戒
   type: video
   video_base_name: red-alert-sizzle
   abbr: ra
-- name: 命令与征服
+- name: 命令与征服：泰伯利亚黎明
   type: video
   video_base_name: command-and-conquer-sizzle
   abbr: cnc
@@ -122,8 +122,8 @@ carousel_items:
   <div class="site-section__content">
     <div class="dark-panel">
       <div class="dark-panel__header">
-        <strong class="text--caps text--medium">Updates from the Developers</strong>
-        <a class="home__developer-updates__view-all" href="{{ '/news/' | relative_url }}">[View All Updates]</a>
+        <strong class="text--caps text--medium">最新进展</strong>
+        <a class="home__developer-updates__view-all" href="{{ '/news/' | relative_url }}">[前往查看所有新闻]</a>
       </div>
       {% for post in site.posts limit:1 %}
         {% include developer-update.html title=post.title author=post.author created_at=post.created_at body=post.content disqus_id=post.disqus_id %}
