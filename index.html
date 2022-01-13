@@ -50,9 +50,6 @@ carousel_items:
           {% for carousel_item in page.carousel_items %}
             <div id="hero-{{carousel_item.abbr}}" class="carousel__item">
               <div class="carousel__item__content aspect-16-9">
-                {% if carousel_item.type == 'image' %}
-                <img class="hero-carousel__image" src="{{ '/videos/' | relative_url }}{{carousel_item.image_name}}"/>
-                {% elsif carousel_item.type == 'video' %}
                 <video
                   class="hero-carousel__image"
                   autoplay="true"
@@ -62,6 +59,8 @@ carousel_items:
                   <source src="{{ '/videos/' | relative_url }}{{carousel_item.video_base_name}}.webm" type="video/webm" />
                   <source src="{{ '/videos/' | relative_url }}{{carousel_item.video_base_name}}.mp4" type="video/mp4" />
                 </video>
+                {% if carousel_item.type == 'image' %}
+                <img class="hero-carousel__image" src="{{ '/videos/' | relative_url }}{{carousel_item.image_name}}"/>
                 {% endif %}
               </div>
             </div>
