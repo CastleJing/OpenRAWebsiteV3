@@ -1,0 +1,40 @@
+name: Deploy Website to Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  linux:
+    name: Deploy Website to Server
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+
+      - name: Build Website
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          sudo gem install bundler
+          bundle install
+          bundle exec jekyll build
+
+      - name: Set Deploy Server Private Key
+        env:
+          SERVER_KEY: ${{ secrets.SERVER_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SERVER_KEY" > ~/.ssh/ssh_github
+          chmod 600 ~/.ssh/ssh_github
+          ssh-keyscan openra.org.cn >> ~/.ssh/known_hosts
+
+      - name: Push Website
+        run: |
+          tar -zcvf site.tar.gz _site
+
+      - name: Deploy to Server
+        run: |
+          scp -i ~/.ssh/ssh_github site.tar.gz gitbot@openra.org.cn:~ 
+          ssh gitbot@openra.org.cn -i ~/.ssh/ssh_github "tar -zxvf site.tar.gz; rm site.tar.gz; rm -rf test; mv _site test"
