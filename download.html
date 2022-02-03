@@ -1,5 +1,5 @@
 ---
-title: "Download"
+title: "下载"
 permalink: "/download/"
 js:
 - /scripts/download.js
@@ -14,28 +14,27 @@ js:
   <section class="site-section">
     <div class="site-section__content">
       <h1 class="site-section__heading">Download</h1>
-      <p class="text--large">OpenRA is available for many modern operating systems.
+      <p class="text--large">OpenRA是一款跨平台游戏，适用于多种操作系统。
         {% if playtest %}
-          The latest stable release is <code>{{ release.tag_name }}</code> and the latest playtest is <code>{{ playtest.tag_name }}</code>.
+        目前最新且稳定的发布版是：<code>{{ release.tag_name }}</code>，最新的测试版是：<code>{{ playtest.tag_name }}</code>
         {% else %}
-          The latest stable release is <code>{{ release.tag_name }}</code>.
+        目前最新且稳定的发布版是：<code>{{ release.tag_name }}</code>
         {% endif %}
       </p>
   
       <div class="download-info">
         <div class="download-info__build">
-          <h3>Which Build?</h3>
-          <p>Two builds are available, depending on how you want to play:</p>
+          <h3>我应该选择哪一个版本？</h3>
+          <p>OpenRA提供两个可选版本，分别是测试版（Playtest）和发布版（Release），你可以根据自己的需求自行选择。</p>
           <ul>
-            <li><strong>Release</strong> is recommended for players who want to play multiplayer games online.</li>
-            <li><strong>Playtest</strong> provides a preview of the latest improvements for players who want to help test and shape the future releases of OpenRA.</li>
+            <li><strong>发布版</strong>适合那些追求稳定并且有联机需求的玩家；</li>
+            <li><strong>测试版</strong>则包含了一些可能不太稳定的更新或者改动，如果你想要帮助测试或者改进OpenRA，可以考虑游玩测试版。</li>
           </ul>
-          <p>Older builds can be found in the <a href="https://github.com/OpenRA/OpenRA/releases">GitHub Releases archive</a>.</p>
         </div>
         <div class="download-info__license">
-          <h3>License and Game Assets</h3>
-          <p>The OpenRA game engine is free software released under the <a href="{{ '/legal/#license' | relative_url }}">GPL3 license</a>. The OpenRA mods require files from the original games, which are used under the license granted by the <a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-remastered/modding-faq">C&C Franchise Modding Guidelines</a>. These files are not covered by the OpenRA license, and you will be prompted to download or copy them the first time you run a mod.</p>
-          <p><em>EA has not endorsed and does not support this product.</em></p>
+          <h3>游戏素材与权属说明</h3>
+          <p>OpenRA引擎是基于<a href="{{ '/legal/#license' | relative_url }}">GPL3协议</a>的免费开源软件，而OpenRA的模组必须依赖原始游戏的素材文件才能正常运行。上述素材文件的使用均遵循EA发布的命令与征服系列模组说明书（<a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-remastered/modding-faq">C&C Franchise Modding Guidelines</a>）。请注意，这些文件的权属并不由OpenRA方面持有，并且你将被要求从合法的渠道下载或取得这些文件。</p>
+          <p><em>EA对OpenRA不负有任何责任。</em></p>
         </div>
       </div>
 
@@ -47,7 +46,7 @@ js:
   <section id="server-browser" class="servers site-section">
     <div class="site-section__content">
 
-      <h2 class="site-section__heading">Choose Your Platform</h2>
+      <h2 class="site-section__heading">选择你的操作系统</h2>
       <fieldset class="button-group download__os-selector">
         <label class="radio-button radio-button--icon button download__os download__os-windows">
           <svg class="button__icon icon">
@@ -106,7 +105,7 @@ js:
             <use xlink:href="{{ '/images/icons/icons.svg#icon-github' | relative_url }}"></use>
           </svg>
           <div>
-            Source
+            源代码
           </div>
           <input
             class="radio-button__input download__os download__os-source"
@@ -120,7 +119,7 @@ js:
         <div id="instructions" class="instructions">
           <div id="windows-instructions" class="instruction dark-panel">
             <div class="instruction__content">
-              OpenRA works on most computers running Windows 7 or later that support DirectX 11 or OpenGL 3+.
+              OpenRA可在任何支持DirectX11以及OPenGL 3+的Window 7以及后续操作系统上运行
               <p class="text--centered">
                 <span class="button-group">
                 {% include release-download-button.html
@@ -153,7 +152,7 @@ js:
       
           <div id="macos-instructions" class="instruction dark-panel">
             <div class="instruction__content">
-              OpenRA works best on a mac running <strong>macOS 10.13</strong> or later.
+              OpenRA适合在<strong>macOS 10.13</strong>及后续版本的操作系统上运行
               <p class="text--centered">
                 <span class="button-group">
                   {% include release-download-button.html
@@ -182,9 +181,9 @@ js:
       
           <div id="linux-instructions" class="instruction dark-panel">
             <div class="instruction__content">
-              <h4>Official AppImages</h4>
-              <p>OpenRA is distributed as portable AppImages that run on most modern 64-bit Linux distributions.</p>
-              <p>Download the mods you want to play, make the AppImage files executable, then double click to play! Install the optional <a href="https://github.com/AppImage/appimaged/">appimaged</a> utility to integrate OpenRA with your system launcher and web browser.</p>
+              <h4>官方AppImages</h4>
+              <p>OpenRA可以像其他应用程序一样在绝大部分当代64位Linux系统上运行</p>
+              <p>你必须单独下载每一个模组，并使之可被顺利执行，随后双击即可启动游戏；你也可以安装可选的<a href="https://github.com/AppImage/appimaged/">appimaged</a>程序，从而将OpenRA与你的系统或浏览器集成在一起</p>
               <p class="text--centered">
                 <span class="button-group">
                 {% include release-download-button.html
@@ -316,19 +315,19 @@ js:
       
           <div id="free-bsd-instructions" class="instruction dark-panel">
             <div class="instruction__content">
-              Stable releases are available in the <a href="https://www.freshports.org/games/openra/">FreeBSD Ports Collection</a>:
+              玩家可以在<a href="https://www.freshports.org/games/openra/">FreeBSD Ports Collection</a>获取最新的稳定版资源
               <p>
 <code class="terminal"><span class="terminal__prompt">#</span> cd /usr/ports/games/openra
 <span class="terminal__prompt">#</span> make install</code>
               </p>
-              <p class="text--warning text--small">We do not maintain this external package source, so there may be delays when a new version is released. Please contact the downstream repository maintainers about any packaging issues.
+              <p class="text--warning text--small">请注意，OpenRA官方不负责此类社群平台的维护工作；在新版本发布后，此类下游平台可能会出现一些发布延迟
               </p>
             </div>
           </div>
       
           <div id="source-instructions" class="instruction dark-panel">
             <div class="instruction__content">
-              OpenRA can be compiled from source on all platforms.
+              你可以下载OpenRA源代码并在任何平台上进行编译
               <p class="text--centered">
                 <span class="button-group">
                 {% include release-download-button.html
