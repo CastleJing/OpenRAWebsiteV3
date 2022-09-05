@@ -171,7 +171,7 @@ js:
                   A "compat" version supporting OS X 10.9 – 10.12 can be downloaded from the <a href="{{ release.html_url }}">{{ release.tag_name }}</a> archive.
                 {% endif %}
               </p>
-              <p>Stable releases are also available from <a href="https://brew.sh/">Homebrew Cask</a>:</p>
+              <p>Stable releases are also available from <a href="https://formulae.brew.sh/cask/openra">Homebrew Cask</a>:</p>
               <p>
                 <code class="terminal"><span class="terminal__prompt">$</span> brew install --cask openra</code>
               </p>
@@ -245,7 +245,7 @@ js:
                   Flatpak
                 </dt>
                 <dd>
-                  <p>Stable releases and Playtests are available from Flathub:</p>
+                  <p>Stable releases and Playtests are available from <a href="https://flathub.org/apps/details/net.openra.OpenRA">Flathub</a>:</p>
                   <p>
 <code class="terminal"><span class="terminal__prompt">$</span> flatpak install --from https://flathub.org/repo/appstream/net.openra.OpenRA.flatpakref
 <span class="terminal__prompt">$</span> flatpak install --from https://flathub.org/beta-repo/appstream/net.openra.OpenRA.flatpakref</code>
@@ -299,6 +299,17 @@ js:
                   </p>
                 </dd>
                 
+                <dt>
+                  <img src="{{ '/images/icons/linux-mirrors/ubuntu.svg' | relative_url }}" class="icon" />
+                  Ubuntu
+                </dt>
+                <dd>
+                  Stable releases are available via <a href="https://xtradeb.net/play/openra/">XtraDeb</a>.
+                  <p>
+                    <code class="terminal"><span class="terminal__prompt">$</span> apt install openra</code>
+                  </p>
+                </dd>
+
                 <dt>
                   <img class="icon" src="{{ '/images/icons/linux-mirrors/void.svg' | relative_url }}" />
                   Void Linux
