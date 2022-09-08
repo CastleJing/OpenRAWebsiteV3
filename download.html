@@ -133,20 +133,20 @@ js:
               </p>
               <p class="text--info text--small">
                 {% if playtest %}
-                  32-bit installers and portable releases can be downloaded from the <a href="{{ release.html_url }}">{{ release.tag_name }}</a> and <a href="{{ playtest.html_url }}">{{ playtest.tag_name }}</a> archives.
+                  32位安装包和可移植版本可以从<a href="{{ release.html_url }}">{{ release.tag_name }}</a>和<a href="{{ playtest.html_url }}">{{ playtest.tag_name }}</a>下载。
                 {% else %}
-                  32-bit installers and portable releases can be downloaded from the <a href="{{ release.html_url }}">{{ release.tag_name }}</a> archive.
+                  32位安装包和可移植版本可以从<a href="{{ release.html_url }}">{{ release.tag_name }}</a>下载。
                 {% endif %}
               </p>
-              <p>Stable releases are also available from <a href="https://winstall.app/apps/OpenRA.OpenRA">WinGet</a>:</p>
+              <p>从<a href="https://winstall.app/apps/OpenRA.OpenRA">WinGet</a>获得稳定发布版：</p>
               <p>
                 <code class="terminal"><span class="terminal__prompt">></span> winget install openra</code>
               </p>
-              <p>Packages are also available from <a href="https://community.chocolatey.org/packages/openra">Chocolatey</a>:</p>
+              <p>从<a href="https://community.chocolatey.org/packages/openra">Chocolatey</a>获得软件包：</p>
               <p>
                 <code class="terminal"><span class="terminal__prompt">></span> choco install openra</code>
               </p>
-              <p class="text--warning text--small">We do not maintain this external package source, so there may be delays when a new version is released. Please contact the downstream repository maintainers about any packaging issues.</p>
+              <p class="text--warning text--small">请注意，OpenRA官方不负责该社群平台的维护工作；在新版本发布后，此类下游平台可能会出现一些发布延迟</p>
             </div>
           </div>
       
@@ -166,16 +166,16 @@ js:
               </p>
               <p class="text--info text--small">
                 {% if playtest %}
-                  A "compat" version supporting OS X 10.9 – 10.12 can be downloaded from the <a href="{{ release.html_url }}">{{ release.tag_name }}</a> and <a href="{{ playtest.html_url }}">{{ playtest.tag_name }}</a> archives.
+                  支持 OS X 10.9 – 10.12 的兼容性版本可以从 <a href="{{ release.html_url }}">{{ release.tag_name }}</a> 以及 <a href="{{ playtest.html_url }}">{{ playtest.tag_name }}</a> 下载。
                 {% else %}
-                  A "compat" version supporting OS X 10.9 – 10.12 can be downloaded from the <a href="{{ release.html_url }}">{{ release.tag_name }}</a> archive.
+                  支持 OS X 10.9 – 10.12 的兼容性版本可以从 <a href="{{ release.html_url }}">{{ release.tag_name }}</a> 下载。
                 {% endif %}
               </p>
-              <p>Stable releases are also available from <a href="https://formulae.brew.sh/cask/openra">Homebrew Cask</a>:</p>
+              <p>从<a href="https://formulae.brew.sh/cask/openra">Homebrew Cask</a>获得稳定发布版：</p>
               <p>
                 <code class="terminal"><span class="terminal__prompt">$</span> brew install --cask openra</code>
               </p>
-              <p class="text--warning text--small">We do not maintain this external package source, so there may be delays when a new version is released. Please contact the downstream repository maintainers about any packaging issues.</p>
+              <p class="text--warning text--small">请注意，OpenRA官方不负责此类社群平台的维护工作；在新版本发布后，此类下游平台可能会出现一些发布延迟</p>
             </div>
           </div>
       
@@ -236,22 +236,22 @@ js:
                 </span>
               </p>
               <hr />
-              <h4>Community Maintained Packages</h4>
-              <p>OpenRA may also be installed using packages provided by your Linux distribution or other third parties. These packages will provide better integration with your system, but may not always offer the latest release. Please contact the downstream repository maintainers about any packaging issues.</p>
-              <p class="text--warning text--small">We do not maintain these external package sources, so there may be delays when a new version is released. Please contact the downstream repository maintainers about any packaging issues.</p>
+              <h4>社区维护包</h4>
+              <p>OpenRA也可以使用Linux发行版或其他第三方提供的软件包进行安装。这些软件包将提供与您的系统更好的集成，但可能并不总是提供最新版本。有关任何打包问题，请联系下游存储库维护人员。</p>
+              <p class="text--warning text--small">请注意，OpenRA官方不负责此类社群平台的维护工作；在新版本发布后，此类下游平台可能会出现一些发布延迟</p>
               <dl class="download__community-packages">
                 <dt>
                   <img class="icon" src="{{ '/images/icons/linux-mirrors/flatpak.png' | relative_url }}" alt="" />
                   Flatpak
                 </dt>
                 <dd>
-                  <p>Stable releases and Playtests are available from <a href="https://flathub.org/apps/details/net.openra.OpenRA">Flathub</a>:</p>
+                  <p>从<a href="https://flathub.org/apps/details/net.openra.OpenRA">Flathub</a>获得稳定发布版及可玩性测试版：</p>
                   <p>
 <code class="terminal"><span class="terminal__prompt">$</span> flatpak install --from https://flathub.org/repo/appstream/net.openra.OpenRA.flatpakref
 <span class="terminal__prompt">$</span> flatpak install --from https://flathub.org/beta-repo/appstream/net.openra.OpenRA.flatpakref</code>
                   </p>
                   <p class="text--info text--small">
-                    The Flatpak sandbox is known to interfere with the mod switching feature between official and community mods. We recommend that players who would like to use this feature run the AppImage releases.
+                    请注意，Flatpak沙盒会干扰官方和社区mod之间的mod切换功能。我们建议希望使用此功能的玩家运行AppImage版本。
                   </p>
                 </dd>
                 
@@ -260,7 +260,7 @@ js:
                   Snap
                 </dt>
                 <dd>
-                  <p>Stable releases are available from the <a href="https://snapcraft.io/openra">Snap Store</a>:</p>
+                  <p>从<a href="https://snapcraft.io/openra">Snap Store</a>获得稳定发布版：</p>
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> snap install openra</code>
                   </p>
@@ -271,7 +271,7 @@ js:
                   Arch Linux
                 </dt>
                 <dd>
-                  <p>Stable releases are available in the official <a href="https://www.archlinux.org/packages/community/any/openra/">Arch repository</a>:</p>
+                  <p>从官方<a href="https://www.archlinux.org/packages/community/any/openra/">Arch 仓库</a>获得稳定发布版：</p>
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> pacman -S openra</code>
                   </p>
@@ -282,7 +282,7 @@ js:
                   openSUSE Linux
                 </dt>
                 <dd>
-                  Stable releases and playtests are available via the <a href="http://software.opensuse.org/download.html?project=games:openra&amp;package=openra">openSUSE Build Service repository</a>.
+                  从<a href="http://software.opensuse.org/download.html?project=games:openra&amp;package=openra">openSUSE Build Service repository</a>获得稳定发布版及可玩性测试版：
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> zypper install openra</code>
                   </p>
@@ -293,7 +293,7 @@ js:
                   Solus
                 </dt>
                 <dd>
-                  <p>Stable releases are available from the official Solus repository:</p>
+                  <p>从官方Solus存储库获得稳定发布版：</p>
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> eopkg it openra</code>
                   </p>
@@ -304,7 +304,7 @@ js:
                   Ubuntu
                 </dt>
                 <dd>
-                  Stable releases are available via <a href="https://xtradeb.net/play/openra/">XtraDeb</a>.
+                  从<a href="https://xtradeb.net/play/openra/">XtraDeb</a>获得稳定发布版：
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> apt install openra</code>
                   </p>
@@ -315,7 +315,7 @@ js:
                   Void Linux
                 </dt>
                 <dd>
-                  <p>Stable releases are available from the official <a href="https://github.com/void-linux/void-packages/tree/master/srcpkgs/openra">Void Linux repository</a>:</p>
+                  <p>从官方<a href="https://github.com/void-linux/void-packages/tree/master/srcpkgs/openra">Void Linux 仓库</a>获得稳定发布版：</p>
                   <p>
                     <code class="terminal"><span class="terminal__prompt">$</span> xbps-install openra</code>
                   </p>
@@ -354,9 +354,9 @@ js:
               </p>
               <p class="text--info text--small">
               {% if playtest %}
-                Compilation instructions are available for <a href="https://github.com/OpenRA/OpenRA/blob/{{ release.tag_name }}/INSTALL.md">{{ release.tag_name }}</a> and <a href="https://github.com/OpenRA/OpenRA/blob/{{ playtest.tag_name }}/INSTALL.md">{{ playtest.tag_name }}</a>.
+                编译说明可以从<a href="https://github.com/OpenRA/OpenRA/blob/{{ release.tag_name }}/INSTALL.md">{{ release.tag_name }}</a> 以及 <a href="https://github.com/OpenRA/OpenRA/blob/{{ playtest.tag_name }}/INSTALL.md">{{ playtest.tag_name }}</a>获取。
               {% else %}
-                Compilation instructions are available for <a href="https://github.com/OpenRA/OpenRA/blob/{{ release.tag_name }}/INSTALL.md">{{ release.tag_name }}</a>.
+                编译说明可以从<a href="https://github.com/OpenRA/OpenRA/blob/{{ release.tag_name }}/INSTALL.md">{{ release.tag_name }}</a>获取。
               {% endif %}
               </p>
             </div>
