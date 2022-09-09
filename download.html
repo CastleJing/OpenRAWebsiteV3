@@ -14,11 +14,11 @@ js:
   <section class="site-section">
     <div class="site-section__content">
       <h1 class="site-section__heading">下载</h1>
-      <p class="text--large">OpenRA是一款跨平台游戏，适用于多种操作系统。
+      <p class="text--large">OpenRA是一款多平台游戏，可以在多种当代主流操作系统中运行。
         {% if playtest %}
-        目前最新且稳定的发布版是：<code>{{ release.tag_name }}</code>，最新的测试版是：<code>{{ playtest.tag_name }}</code>
+        现行最新的正式版是：<code>{{ release.tag_name }}</code>，最新的测试版是：<code>{{ playtest.tag_name }}</code>
         {% else %}
-        目前最新且稳定的发布版是：<code>{{ release.tag_name }}</code>
+        现行最新的正式版是：<code>{{ release.tag_name }}</code>
         {% endif %}
       </p>
   
@@ -27,14 +27,14 @@ js:
           <h3>我应该选择哪一个版本？</h3>
           <p>OpenRA提供两个可选版本，分别是测试版（Playtest）和发布版（Release），你可以根据自己的需求自行选择。</p>
           <ul>
-            <li><strong>发布版</strong>适合那些追求稳定并且有联机需求的玩家；</li>
-            <li><strong>测试版</strong>则包含了一些可能不太稳定的更新或者改动，如果你想要帮助测试或者改进OpenRA，可以考虑游玩测试版。</li>
+            <li><strong>正式版</strong>足以满足绝大部分玩家的需求；</li>
+            <li><strong>测试版</strong>作为未来OpenRA正式版的预览，更适合那些想要抢先体验，或者想要协助我们完善OpenRA的玩家们。</li>
           </ul>
         </div>
         <div class="download-info__license">
           <h3>游戏素材与权属说明</h3>
-          <p>OpenRA引擎是基于<a href="{{ '/legal/#license' | relative_url }}">GPL3协议</a>的免费开源软件，而OpenRA的模组必须依赖原始游戏的素材文件才能正常运行。上述素材文件的使用均遵循EA发布的命令与征服系列模组说明书（<a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-remastered/modding-faq">C&C Franchise Modding Guidelines</a>）。请注意，这些文件的权属并不由OpenRA方面持有，并且你将被要求从合法的渠道下载或取得这些文件。</p>
-          <p><em>EA对OpenRA不负有任何责任。</em></p>
+          <p>OpenRA（游戏及游戏引擎）是基于<a href="{{ '/legal/#license' | relative_url }}">GPL3协议</a>的免费开源软件，的免费开源软件；然而OpenRA的模组必须依赖原始游戏的素材文件才能正常运行。上述素材文件的使用均遵循EA发布的命令与征服系列模组说明书（<a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-remastered/modding-faq">C&C Franchise Modding Guidelines</a>）。</p>
+          <p><em>请注意，OpenRA并不持有上述“原始游戏之素材文件”的权属，您必须从合法且正当的来源自行获取运行OpenRA所必须的上述文件。</em></p>
         </div>
       </div>
 
@@ -120,6 +120,7 @@ js:
           <div id="windows-instructions" class="instruction dark-panel">
             <div class="instruction__content">
               OpenRA可在任何支持DirectX11以及OPenGL 3+的Window 7以及后续操作系统上运行
+              <p class="text--warning text--small">OpenRA汉化组注：如您条件允许，请尽量在 Windows 10 的操作系统上运行OpenRA</p>
               <p class="text--centered">
                 <span class="button-group">
                 {% include release-download-button.html
@@ -190,13 +191,13 @@ js:
                   release=release
                   type="appimage"
                   appimagename="Red-Alert"
-                  text="Download Red Alert"
+                  text="下载红色警戒"
                   icon='/images/icons/ra_64x64.png' %}
                 {% include release-download-button.html
                   release=playtest
                   type="appimage"
                   appimagename="Red-Alert-playtest"
-                  text="Download Red Alert"
+                  text="下载红色警戒测试版"
                   icon='/images/icons/ra_64x64.png'
                   playtest=true %}
                 </span>
@@ -207,13 +208,13 @@ js:
                   release=release
                   type="appimage"
                   appimagename="Tiberian-Dawn"
-                  text="Download Tiberian Dawn"
+                  text="下载泰伯利亚的黎明"
                   icon='/images/icons/cnc_64x64.png' %}
                 {% include release-download-button.html
                   release=playtest
                   type="appimage"
                   appimagename="Tiberian-Dawn-playtest"
-                  text="Download Tiberian Dawn"
+                  text="下载泰伯利亚的黎明测试版"
                   icon='/images/icons/cnc_64x64.png'
                   playtest=true %}
                 </span>
@@ -224,13 +225,13 @@ js:
                   release=release
                   type="appimage"
                   appimagename="Dune-2000"
-                  text="Download Dune 2000"
+                  text="下载沙丘2000"
                   icon='/images/icons/d2k_64x64.png' %}
                 {% include release-download-button.html
                   release=playtest
                   type="appimage"
                   appimagename="Dune-2000-playtest"
-                  text="Download Dune 2000"
+                  text="下载沙丘2000测试版"
                   icon='/images/icons/d2k_64x64.png'
                   playtest=true %}
                 </span>
